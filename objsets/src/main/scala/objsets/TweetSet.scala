@@ -253,7 +253,7 @@ object GoogleVsApple {
 
 
   def filterTweets(keywords: List[String], tweets: TweetSet): TweetSet =
-          tweets.filter(t => keywords.exists(c => t.text.contains(c)))
+          tweets.filter((tw: Tweet) => keywords.exists((key: String) => tw.text.contains(key)))
 
 
   /*lazy val googleTweets: TweetSet = new Empty union google foreach allTweets.filter((tw: tweet) => tw.text.contains(_))*/
@@ -270,11 +270,6 @@ object GoogleVsApple {
 
 object Main extends App {
   // Print the trending tweets
-  /*GoogleVsApple.googleTweets foreach println*/
-  /*println(GoogleVsApple.googleTweets.mostRetweeted)
-  val number1 = GoogleVsApple.googleTweets.mostRetweeted
-  val number2 = new Cons(number1, new Cons(GoogleVsApple.googleTweets.remove(number1).mostRetweeted, Nil))
-  number2 foreach println*/
-  GoogleVsApple.googleTweets.descendingByRetweet foreach println
-  /*GoogleVsApple.trending foreach println*/
+  
+  GoogleVsApple.trending foreach println
 }
