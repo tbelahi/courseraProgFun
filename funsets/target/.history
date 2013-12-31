@@ -1,0 +1,37 @@
+compile
+test
+run
+compile
+run
+test
+compile
+last
+compile
+run
+test
+last
+test
+styleCheck
+run
+compile
+last
+compile
+last
+compile
+run
+test
+run
+console
+run
+test
+styleCheck
+run
+test
+styleCheck
+test
+run
+test
+styleCheck
+submit thomas.belahi@mines-nancy.org J7k89PJn6N
+test
+submit thomas.belahi@mines-nancy.org J7k89PJn6N

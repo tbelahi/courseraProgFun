@@ -1,0 +1,33 @@
+compile
+sbt run
+run
+sbt compile
+compile
+run
+test
+console
+compile
+test
+compile
+test
+compile
+test
+exit
+console
+compile
+run
+compile
+run
+compile
+run
+compile
+run
+test
+styleCheck
+compile
+console
+compile
+test
+styleCheck
+submit thomas.belahi@mines-nancy.org J7k89PJn6N
+console
