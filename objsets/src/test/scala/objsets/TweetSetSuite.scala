@@ -16,6 +16,7 @@ class TweetSetSuite extends FunSuite {
     val set4c = set3.incl(c)
     val set4d = set3.incl(d)
     val set5 = set4c.incl(d)
+    val set6 = set5 union set1
   }
 
   def asSet(tweets: TweetSet): Set[Tweet] = {
@@ -42,6 +43,12 @@ class TweetSetSuite extends FunSuite {
     new TestSets {
       assert(size(set5.filter(tw => tw.retweets == 20)) === 2)
     }
+  }
+
+  test("filter: 20 on set 6") {
+    new TestSets {
+      assert(size(set6.filter(tw => tw.retweets == 20)) === 2)
+    }  
   }
 
   test("union: set4c and set4d") {

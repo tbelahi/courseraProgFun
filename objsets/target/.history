@@ -10,3 +10,26 @@ run
 submit thomas.belahi@mines-nancy.org J7k89PJn6N
 test
 submit thomas.belahi@mines-nancy.org J7k89PJn6N
+test
+run
+subtmit thomas.belahi@mines-nancy.org *.sbt
+subtmit thomas.belahi@mines-nancy.org J7k89PJn6N
+submit thomas.belahi@mines-nancy.org J7k89PJn6N
+test
+run
+test
+last assignment/test:test
+test
+subtmit thomas.belahi@mines-nancy.org J7k89PJn6N
+submit thomas.belahi@mines-nancy.org J7k89PJn6N
+run
+subtmit thomas.belahi@mines-nancy.org J7k89PJn6N
+submit thomas.belahi@mines-nancy.org J7k89PJn6N
+run
+test
+run
+test
+run
+test
+run
+submit thomas.belahi@mines-nancy.org J7k89PJn6N

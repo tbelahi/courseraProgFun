@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/Users/thomasbelahi/Documents/scala/objsets/}assignment...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/Users/thomasbelahi/Documents/scala/courseraProgFun/objsets/}assignment...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: progfun-objsets#progfun-objsets_2.10;1.0.0[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -203,25 +203,25 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for progfun-objsets#progfun-objsets_2.10;1.0.0 [docs][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'pom'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for progfun-objsets#progfun-objsets_2.10;1.0.0 [pom][0m
-[0m[[0mdebug[0m] [0m	resolved ivy file produced in /Users/thomasbelahi/Documents/scala/objsets/target/resolution-cache/progfun-objsets/progfun-objsets_2.10/1.0.0/resolved.xml.xml[0m
+[0m[[0mdebug[0m] [0m	resolved ivy file produced in /Users/thomasbelahi/Documents/scala/courseraProgFun/objsets/target/resolution-cache/progfun-objsets/progfun-objsets_2.10/1.0.0/resolved.xml.xml[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalatest#scalatest_2.10;1.9.1!scalatest_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] junit#junit;4.10!junit.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-actors;2.10.0!scala-actors.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.0!scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.hamcrest#hamcrest-core;1.1!hamcrest-core.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 373ms :: artifacts dl 5ms[0m
-[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 compile produced in /Users/thomasbelahi/Documents/scala/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 runtime produced in /Users/thomasbelahi/Documents/scala/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 test produced in /Users/thomasbelahi/Documents/scala/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 provided produced in /Users/thomasbelahi/Documents/scala/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 optional produced in /Users/thomasbelahi/Documents/scala/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 compile-internal produced in /Users/thomasbelahi/Documents/scala/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 runtime-internal produced in /Users/thomasbelahi/Documents/scala/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 test-internal produced in /Users/thomasbelahi/Documents/scala/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 plugin produced in /Users/thomasbelahi/Documents/scala/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 sources produced in /Users/thomasbelahi/Documents/scala/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 docs produced in /Users/thomasbelahi/Documents/scala/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 pom produced in /Users/thomasbelahi/Documents/scala/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-pom.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (373ms resolve - 5ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 308ms :: artifacts dl 3ms[0m
+[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 compile produced in /Users/thomasbelahi/Documents/scala/courseraProgFun/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 runtime produced in /Users/thomasbelahi/Documents/scala/courseraProgFun/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 test produced in /Users/thomasbelahi/Documents/scala/courseraProgFun/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 provided produced in /Users/thomasbelahi/Documents/scala/courseraProgFun/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 optional produced in /Users/thomasbelahi/Documents/scala/courseraProgFun/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 compile-internal produced in /Users/thomasbelahi/Documents/scala/courseraProgFun/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 runtime-internal produced in /Users/thomasbelahi/Documents/scala/courseraProgFun/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 test-internal produced in /Users/thomasbelahi/Documents/scala/courseraProgFun/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 plugin produced in /Users/thomasbelahi/Documents/scala/courseraProgFun/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 sources produced in /Users/thomasbelahi/Documents/scala/courseraProgFun/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 docs produced in /Users/thomasbelahi/Documents/scala/courseraProgFun/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun-objsets#progfun-objsets_2.10;1.0.0 pom produced in /Users/thomasbelahi/Documents/scala/courseraProgFun/objsets/target/resolution-cache/reports/progfun-objsets-progfun-objsets_2.10-pom.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (308ms resolve - 3ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
