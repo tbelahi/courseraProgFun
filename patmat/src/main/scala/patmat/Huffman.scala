@@ -77,7 +77,30 @@ object Huffman {
    *       println("integer is  : "+ theInt)
    *   }
    */
-  def times(chars: List[Char]): List[(Char, Int)] = ???
+
+   /* times implemention is based on isort/insert scheme from the lecture*/
+   /* recursive approach*/
+  def times(chars: List[Char]): List[(Char, Int)] = chars match {
+    /* base case*/
+    case List() => List()
+    /* recursively account for the head of the list of characters in the occurence list
+     * computed from the tail of the list of characters */
+    case x::xs => insert(x, times(xs))
+  }
+
+  /* insert function in the fashion of the one in the lecture*/
+  def insert(x: Char, freq: List[(Char,Int)]): List[(Char, Int)] = freq match {
+    /* if x not in occurence list, then add it with occurence of 1*/
+    /* recurrence base case*/
+    case List() => List((x,1))
+
+    /**go through the occurence list, recursively, and if x add 1 to the occurence value
+     * corresponding to x*/
+    case y::ys => {
+      if (x == y._1) (x, y._2+1) :: ys  
+      else y :: insert(x, ys)
+    }
+  }
 
   /**
    * Returns a list of `Leaf` nodes for a given frequency table `freqs`.
@@ -86,8 +109,15 @@ object Huffman {
    * head of the list should have the smallest weight), where the weight
    * of a leaf is the frequency of the character.
    */
-  def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] = ???
+  def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] = freqs match {
+    case List() => List()
+    case x :: xs => insertLeaf(Leaf(x._1,x._2), makeOrderedLeafList(xs))
+  }
 
+  def insertLeaf(x: Leaf, ordered: List[Leaf]): List[Leaf] = ordered match {
+    case List() => List(x)
+    case y::ys => if (x.weight<=y.weight) x::y::ys else y::insertLeaf(x, ys)
+  }
   /**
    * Checks whether the list `trees` contains only one single code tree.
    */
@@ -209,4 +239,12 @@ object Huffman {
    * and then uses it to perform the actual encoding.
    */
   def quickEncode(tree: CodeTree)(text: List[Char]): List[Bit] = ???
+}
+
+object Main extends App {
+  List('a','b') foreach println
+  Huffman.times(List('a','b','a','c','d','c','b','b','b','a','d','f','c')) foreach println
+  val freqs = Huffman.times(List('a','b','a','c','d','c','b','b','b','a','d','f','c'))
+  Huffman.makeOrderedLeafList(freqs) foreach println
+
 }
