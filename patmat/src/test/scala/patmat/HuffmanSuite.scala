@@ -31,26 +31,46 @@ class HuffmanSuite extends FunSuite {
     assert(string2Chars("hello, world") === List('h', 'e', 'l', 'l', 'o', ',', ' ', 'w', 'o', 'r', 'l', 'd'))
   }
 
-  /**
-  *test("test times"){
-  *  new TestTrees{
-  *    times(List('a','b','a','c','d','c','b')) foreach println
-  *  }
-  *}
-  */
   
+  test("test singleton"){
+    new TestTrees{
+      assert(singleton(List(Leaf('a',1)))==true)
+      assert(singleton(List(Leaf('a',1), Leaf('b',2)))==false)
+      assert(singleton(List())==false)
+    }
+  }
+
   test("makeOrderedLeafList for some frequency table") {
     assert(makeOrderedLeafList(List(('t', 2), ('e', 1), ('x', 3))) === List(Leaf('e',1), Leaf('t',2), Leaf('x',3)))
   }
 
   test("combine of some leaf list") {
+    new TestTrees{
     val leaflist = List(Leaf('e', 1), Leaf('t', 2), Leaf('x', 4))
     assert(combine(leaflist) === List(Fork(Leaf('e',1),Leaf('t',2),List('e', 't'),3), Leaf('x',4)))
+    assert(combine( List(  Leaf('e',1)  )) == List(Leaf('e',1)) )
+    assert(combine(List())==List())
+    }
   }
 
+  test("ncode/decode"){
+    new TestTrees{
+      assert(encode(Huffman.frenchCode)("huffmanestcool".toList)==secret)
+    }
+  }
+  test("quickEncode/decode"){
+    new TestTrees{
+      assert(quickEncode(Huffman.frenchCode)(Huffman.string2Chars("huffmanestcool"))==secret)
+    }
+  }
   test("decode and encode a very short text should be identity") {
     new TestTrees {
       assert(decode(t1, encode(t1)("ab".toList)) === "ab".toList)
+    }
+  }
+  test("decode and quickencode a very short text should be identity") {
+    new TestTrees {
+      assert(decode(t1, quickEncode(t1)("ab".toList)) === "ab".toList)
     }
   }
 }
