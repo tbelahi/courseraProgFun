@@ -17,4 +17,10 @@ run streams.Bloxorz.level1
 exit
 run
 test
-exit
+run
+test
+run
+submit thomas.belahi@mines-nancy.org 3brfFvguqn
+style
+styleCheck
+submit thomas.belahi@mines-nancy.org 3brfFvguqn
