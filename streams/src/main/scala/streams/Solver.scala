@@ -67,17 +67,26 @@ trait Solver extends GameDef {
    * of different paths - the implementation should naturally
    * construct the correctly sorted stream.
    */
-  def from(initial: Stream[(Block, List[Move])],
-           explored: Set[Block]): Stream[(Block, List[Move])] = {
-    if (initial.isEmpty) Stream.empty
-    else {
-      val more = for {
-        (bloc, history) <- initial
-        neighbor <- newNeighborsOnly(neighborsWithHistory(bloc, history), explored)
-      } yield neighbor
-      initial ++ from(more, explored ++ more.map(_._1))
-    }
+  // def from(initial: Stream[(Block, List[Move])],
+  //          explored: Set[Block]): Stream[(Block, List[Move])] = {
+    
+  //   if (initial.isEmpty) Stream.empty
+  //   else {
+  //     val more = for {
+  //       (bloc, history) <- initial
+  //       neighbor <- newNeighborsOnly(neighborsWithHistory(bloc, history), explored)
+  //     } yield neighbor
+  //     initial ++ from(more, explored ++ more.map(_._1))
+  //   }
 
+  // }
+  def from(initial: Stream[(Block, List[Move])],
+            explored: Set[Block]): Stream[(Block, List[Move])] = {
+    val neighbors = newNeighborsOnly(neighborsWithHistory(initial.head._1, initial.head._2), explored)
+    if (neighbors.isEmpty && initial.tail.isEmpty)
+      initial
+    else
+      initial.head #:: from(initial.tail ++ neighbors, explored ++ neighbors.map(x => x._1))
   }
 
   /**
@@ -85,7 +94,7 @@ trait Solver extends GameDef {
    */
   lazy val pathsFromStart: Stream[(Block, List[Move])] = {
     val initial: Stream[(Block, List[Move])] = Stream((startBlock, List[Move]()))
-    val explored = Set[Block]()
+    val explored = Set[Block](startBlock)
     from(initial, explored)
   }
 
@@ -108,5 +117,10 @@ trait Solver extends GameDef {
    * the first move that the player should perform from the starting
    * position.
    */
-  lazy val solution: List[Move] = pathsToGoal.take(1).toList.map(_._2).flatten
-}
+  lazy val solution: List[Move] = {
+    if (pathsToGoal.isEmpty) List()
+    else {
+      pathsToGoal(0)._2
+    }
+  }
+  }

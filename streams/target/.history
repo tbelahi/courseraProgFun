@@ -13,3 +13,8 @@ test
 clean
 test
 run
+run streams.Bloxorz.level1
+exit
+run
+test
+exit
