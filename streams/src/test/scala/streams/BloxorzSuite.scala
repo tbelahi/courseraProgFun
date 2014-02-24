@@ -53,6 +53,32 @@ class BloxorzSuite extends FunSuite {
     }
   }
 
+  test("neighbors") {
+    new Level1 {
+      println(Block(Pos(1,1),Pos(1,1)).neighbors)
+    }
+  }
+
+  test("isLegal level 1") {
+    new Level1 {
+      assert(!Block(Pos(5,1),Pos(6,1)).isLegal)
+      assert(!Block(Pos(3,1),Pos(4,1)).isLegal)
+      assert(Block(Pos(3,1),Pos(3,2)).isLegal)
+      assert(terrain(Pos(3,1)))
+      assert(terrain(Pos(0,0)))
+    }
+  }
+
+
+  test("solve level 1") {
+    new Level1 {
+      assert(neighborsWithHistory(Block(Pos(1,1),Pos(1,1)), List(Left,Up)).toSet == Set(
+        (Block(Pos(1,2),Pos(1,3)), List(Right,Left,Up)),
+        (Block(Pos(2,1),Pos(3,1)), List(Down,Left,Up))
+      ))
+    }
+  }
+
   test("optimal solution for level 1") {
     new Level1 {
       assert(solve(solution) == Block(goal, goal))
